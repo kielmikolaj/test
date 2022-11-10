@@ -2,9 +2,8 @@ import groovy.json.*
 
             pipeline
 {
-                        agent {
-                                    any
-                        }
+                        agent any
+
                         
             stages{
 stage('Bump API version in json') 
