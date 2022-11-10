@@ -9,9 +9,11 @@ pipeline
             steps {
                 dir('test'){
                     script{
-                        def jsonSlurper = new JsonSlurper()
-                        def config = jsonSlurper.parse(new File('package.json'))
-                        println(config)
+                        //def jsonSlurper = new JsonSlurper()
+                        //def config = jsonSlurper.parse(new File('package.json'))
+                        def inputFile = new File("package.json")
+                        def InputJSON = new JsonSlurper().parseText(inputFile.text)
+                        println(InputJSON)
                     }
                 }
             }
