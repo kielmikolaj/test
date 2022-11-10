@@ -1,6 +1,12 @@
 import groovy.json.*
 
-
+            pipeline
+{
+                        agent {
+                                    any
+                        }
+                        
+            stages{
 stage('Bump API version in json') 
 {
             
@@ -10,11 +16,13 @@ stage('Bump API version in json')
                         dir('test'){
                                     script{
                                                  def jsonSlurper = new JsonSlurper()
-                                                def config = jsonSlurper.parse(new File('./package.json'))
+                                                def config = jsonSlurper.parse(new File('package.json'))
                                                 println(config)
                                     }
                         }
             }
+}
+}
 }
             
 //             steps 
