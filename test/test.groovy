@@ -9,7 +9,7 @@ pipeline
             steps {
                 dir('test'){
                      git branch: 'main',
-                     url: 'https://github.com/kielmikolaj/test.git'
+                     url: 'https://github.com/kielmikolaj/test/test.groovy'
 
                     script{
                         //def jsonSlurper = new JsonSlurper()
