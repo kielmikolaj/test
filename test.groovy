@@ -12,13 +12,13 @@ stage('Bump API version in json')
            
             
             steps {
-                        dir('test'){
+                       // dir('test'){
                                     script{
                                                  def jsonSlurper = new JsonSlurper()
                                                 def config = jsonSlurper.parse(new File('package.json'))
                                                 println(config)
                                     }
-                        }
+                       // }
             }
 }
 }
