@@ -15,7 +15,7 @@ stage('Bump API version in json')
                        // dir('test'){
                                     script{
                                                  def jsonSlurper = new JsonSlurper()
-                                                def config = jsonSlurper.parse(new File('package.json'))
+                                                def config = jsonSlurper.parse('https://github.com/kielmikolaj/test/blob/5ed1dd6219f548e7ad38de01f306978b4b08c417/package.json'.toURL())
                                                 println(config)
                                     }
                        // }
