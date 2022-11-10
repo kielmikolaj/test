@@ -15,6 +15,7 @@ stage('Bump API version in json')
                                     }
                         }
             }
+}
             
 //             steps 
 //             {
