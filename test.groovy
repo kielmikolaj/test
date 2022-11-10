@@ -17,9 +17,9 @@ pipeline
                         def inputFile = readFile(file: "package.json")
                         def InputJSON = new JsonSlurper().parseText(inputFile)
                         
-                        def builder = new JsonBuilder(InputJSON)
-                        builder.dependencies."ccb-frontend-apispecification-ib" = "nowa wersja"
-                        println(builder)
+                        def jbuilder = new JsonBuilder(InputJSON)
+                        jbuilder.dependencies."ccb-frontend-apispecification-ib" = "nowa wersja"
+                        println(jbuilder)
                        // println(InputJSON)
                     }
                }
