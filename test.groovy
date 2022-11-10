@@ -1,27 +1,22 @@
 import groovy.json.*
 
-            pipeline
+pipeline
 {
-                        agent any
+    agent any
 
-                        
-            stages{
-stage('Bump API version in json') 
-{
-            
-           
-            
+    stages {
+        stage('Bump API version in json') {
             steps {
-                       // dir('test'){
-                                    script{
-                                                 def jsonSlurper = new JsonSlurper()
-                                                def config = jsonSlurper.parse('https://github.com/kielmikolaj/test/blob/5ed1dd6219f548e7ad38de01f306978b4b08c417/package.json'.toURL())
-                                                println(config)
-                                    }
-                       // }
+                dir('test'){
+                    script{
+                        def jsonSlurper = new JsonSlurper()
+                        def config = jsonSlurper.parse(new File('package.json'))
+                        println(config)
+                    }
+                }
             }
-}
-}
+        }
+    }
 }
             
 //             steps 
