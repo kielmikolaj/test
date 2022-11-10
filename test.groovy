@@ -16,7 +16,7 @@ pipeline
                         //def config = jsonSlurper.parse(new File('package.json'))
                         def inputFile = readFile(file: "package.json")
                         def InputJSON = new JsonSlurper().parseText(inputFile)
-                        println(InputJSON)
+                        println(InputJSON.toPrettyString())
                     }
                }
             }
