@@ -7,7 +7,7 @@ pipeline
     stages {
         stage('Bump API version in json') {
             steps {
-                //dir('test'){
+                dir('test'){
                     script{
                         //def jsonSlurper = new JsonSlurper()
                         //def config = jsonSlurper.parse(new File('package.json'))
@@ -15,7 +15,7 @@ pipeline
                         def InputJSON = new JsonSlurper().parseText(inputFile)
                         println(InputJSON)
                     }
-               // }
+               }
             }
         }
     }
