@@ -19,7 +19,7 @@ pipeline
                         
                         def builder = new JsonBuilder(InputJSON)
                         builder.dependencies."ccb-frontend-apispecification-ib" = "nowa wersja"
-                        println(builder.toPrettyString())
+                        println(builder)
                        // println(InputJSON)
                     }
                }
