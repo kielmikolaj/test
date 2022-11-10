@@ -6,7 +6,7 @@ import groovy.json.*
             
             def jsonSlurper = new JsonSlurper()
             config = jsonSlurper.parse(new File('package.json'))
-            println(config
+            println(config)
             
             
             
