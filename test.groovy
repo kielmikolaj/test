@@ -15,14 +15,14 @@ pipeline
                         //def jsonSlurper = new JsonSlurper()
                         //def config = jsonSlurper.parse(new File('package.json'))
                         def inputFile = readFile(file: "package.json")
-                        def InputJSON = new JsonSlurper().parseText(inputFile)
-                        
-                        inputFile['ccb-frontend-apispecification-ib'] = 'nowa wersja'
-                        writeJSON file: 'package.json', json: inputFile
+                        //def InputJSON = new JsonSlurper().parseText(inputFile)
+                        println(inputFile)
+                       // inputFile['ccb-frontend-apispecification-ib'] = 'nowa wersja'
+                       // writeJSON file: 'package.json', json: inputFile
                        // def jbuilder = new JsonBuilder(InputJSON)
                        // jbuilder.inputFile.dependencies."ccb-frontend-apispecification-ib" = "nowa wersja"
                        // println(jbuilder)
-                       // println(InputJSON)
+
                     }
                }
             }
