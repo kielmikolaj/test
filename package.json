@@ -1,11 +1,11 @@
-{
+/*{
 	"name": "app",
 	"version": "20.256.0",
 	"private": true,
 	"seedConfig": {
 		"defaultProfile": "default"
 	},
-	"dependencies": {
+	"dependencies":*/ {
 		"@angular/animations": "~12.2.0",
 		"@angular/common": "~12.2.0",
 		"@angular/compiler": "~12.2.0",
@@ -41,7 +41,7 @@
 		"shepherd.js": "^6.0.2",
 		"tslib": "^2.3.0",
 		"zone.js": "~0.11.4"
-	},
+	}/*,
 	"devDependencies": {
 		"@angular/cli": "~12.2.0",
 		"@angular/compiler-cli": "~12.2.0",
@@ -74,4 +74,4 @@
 	"lint-staged": {
 		"*.ts": "eslint"
 	}
-}
+}*/
