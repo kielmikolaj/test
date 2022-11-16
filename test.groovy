@@ -34,6 +34,7 @@ def builder = new JsonBuilder(slurped)
 builder.content.device.dpidsha1 = 'abcd'  
 println(builder.toPrettyString())
 writeJSON file: "package2.json", json: content
+                        builder = null
                         /*
                         //def config = jsonSlurper.parse(new File('package.json'))
                         def jsonFile = readFile(file: "package.json")
