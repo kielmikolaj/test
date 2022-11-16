@@ -1,5 +1,5 @@
 import groovy.json.*
-
+/*
 pipeline
 {
     agent any
@@ -33,3 +33,29 @@ pipeline
         }
     }
 }
+*/
+
+
+
+
+
+def content = """
+{
+   "app":{ },
+   "at":2,
+   "badv":[ ],
+   "bcat":[ ],
+   "device":{
+      "carrier":"310-410",
+      "connectiontype":3,
+      "devicetype":1,
+      "dnt":0,
+      "dpidmd5":"268d403db34e32c45869bb1401247af9",
+      "dpidsha1":"1234" 
+   }
+}"""
+
+def slurped = new JsonSlurper().parseText(content)
+def builder = new JsonBuilder(slurped)
+builder.content.device.dpidsha1 = 'abcd'  
+println(builder.toPrettyString())
