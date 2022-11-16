@@ -1,5 +1,5 @@
 import groovy.json.*
-
+/*
 pipeline
 {
     agent any
@@ -24,7 +24,7 @@ pipeline
                         
                         def jbuilder = new JsonBuilder(jsonSlurper)
                         jbuilder."dependencies"."ccb-frontend-apispecification-ib" = "nowa wersja"
-                        writeJSON file: "package.json", json: inputFile
+                        writeJSON file: "package.json", json: jsonFile
                         //println(jbuilder)
                         jsonFile = null
 
@@ -34,11 +34,11 @@ pipeline
         }
     }
 }
+*/
 
 
 
 
-/*
 
 def content = """
 {
@@ -60,4 +60,4 @@ def slurped = new JsonSlurper().parseText(content)
 def builder = new JsonBuilder(slurped)
 builder.content.device.dpidsha1 = 'abcd'  
 println(builder.toPrettyString())
-*/
+writeJSON file: "package2.json", json: content
