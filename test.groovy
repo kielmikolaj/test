@@ -1,5 +1,4 @@
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurperClassic 
+import groovy.json.*
 
 pipeline
 {
@@ -13,11 +12,10 @@ pipeline
                      url: 'https://github.com/kielmikolaj/test.git'
 
                     script{
- 
-                        def jsonSlurper = new groovy.json.JsonSlurperClassic()
+                        
                         //def config = jsonSlurper.parse(new File('package.json'))
                         def inputFile = readFile(file: "package.json")
-                        def InputJSON = jsonSlurper.parseText(inputFile)
+                        def InputJSON = new JsonSlurper().parseText(inputFile)
                         // println(inputFile)
                         //inputFile["wersja"] = 'nowa wersja'
                         //writeJSON file: "package.json", json: inputFile
