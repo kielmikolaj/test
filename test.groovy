@@ -22,6 +22,7 @@ pipeline
                         def jbuilder = new JsonBuilder(InputJSON)
                         jbuilder.inputFile.dependencies.wersja = "nowa wersja"
                         println(jbuilder)
+                        inputFile = null
 
                     }
                }
