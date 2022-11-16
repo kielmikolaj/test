@@ -23,7 +23,7 @@ pipeline
                         //inputFile["wersja"] = 'nowa wersja'
                         //writeJSON file: "package.json", json: inputFile
                         def jbuilder = new JsonBuilder(jsonSlurper)
-                        jbuilder."jsonFile"."dependencies"."ccb-frontend-apispecification-ib" = "nowa wersja"
+                        jbuilder."dependencies"."ccb-frontend-apispecification-ib" = "nowa wersja"
                         //println(jbuilder)
                         jsonFile = null
 
