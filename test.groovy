@@ -1,6 +1,6 @@
 import groovy.json.*
 
-pipeline
+/*pipeline
 {
     agent any
 
@@ -9,9 +9,9 @@ pipeline
             steps {
                 /*dir('test'){
                      git branch: 'main',
-                     url: 'https://github.com/kielmikolaj/test.git' */
+                     url: 'https://github.com/kielmikolaj/test.git' 
 
-                    script{
+                    script{ */
                     
                         //def config = jsonSlurper.parse(new File('package.json'))
                         jsonFile = readJSON file: 'package.json'
@@ -28,12 +28,12 @@ pipeline
                         //println(jbuilder)
                         //jsonFile = null
                         
-                    }
+                /*    }
               // }
             }
         }
     }
-}
+} */
 
 
 
