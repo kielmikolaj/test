@@ -7,9 +7,9 @@ pipeline
     stages {
         stage('Bump API version in json') {
             steps {
-                dir('test'){
+                /*dir('test'){
                      git branch: 'main',
-                     url: 'https://github.com/kielmikolaj/test.git'
+                     url: 'https://github.com/kielmikolaj/test.git' */
 
                     script{
                     
@@ -29,7 +29,7 @@ pipeline
                         //jsonFile = null
                         
                     }
-               }
+              // }
             }
         }
     }
